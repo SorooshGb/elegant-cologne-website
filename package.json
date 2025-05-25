@@ -18,12 +18,16 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@dprint/json": "^0.20.0",
+    "@dprint/typescript": "^0.95.4",
     "@eslint/eslintrc": "^3",
     "@slicemachine/adapter-next": "^0.3.77",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dprint": "^0.50.0",
+    "dprint-plugin-malva": "^0.12.1",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "slice-machine-ui": "^2.16.0",
