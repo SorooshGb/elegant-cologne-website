@@ -4,9 +4,10 @@ import { useGSAP } from '@gsap/react';
 import { asText, RichTextField } from '@prismicio/client';
 import clsx from 'clsx';
 import { gsap } from 'gsap';
-import { ElementType, ReactNode, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ElementType, useRef } from 'react';
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 type RevealTextProps = {
   field: RichTextField;
@@ -16,6 +17,8 @@ type RevealTextProps = {
   as?: ElementType;
   duration?: number;
   align?: 'center' | 'start' | 'end';
+  triggerStart?: string;
+  triggerEnd?: string;
 };
 
 gsap.registerPlugin(useGSAP);
@@ -28,11 +31,13 @@ function RevealText(
     as: Component = 'div',
     duration = .8,
     staggerAmount = .1,
-    className
+    className,
+    triggerStart = 'top 80%',
+    triggerEnd = 'bottom 20%'
   }: RevealTextProps
 ) {
-  const words = asText(field).split(' ');
   const componentRef = useRef<HTMLDivElement>(null);
+  const words = asText(field).split(' ');
 
   useGSAP(() => {
     const mm = gsap.matchMedia();
@@ -42,6 +47,7 @@ function RevealText(
         stagger: staggerAmount,
         duration,
         ease: 'power3.out',
+        scrollTrigger: { trigger: componentRef.current, start: triggerStart, end: triggerEnd },
       });
     });
 
