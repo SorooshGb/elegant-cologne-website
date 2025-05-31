@@ -28,10 +28,8 @@ export default function RootLayout({ children }: Readonly<{
   return (
     <html lang="en" className={`${raleway.variable} ${gambarino.variable} antialiased`}>
       <body className="bg-neutral-900 text-white">
-        <main className="pt-14 md:pt-16">
-          <Navbar />
-          {children}
-        </main>
+        <Navbar />
+        <main className="pt-14 md:pt-16">{children}</main>
         <Footer />
       </body>
     </html>
