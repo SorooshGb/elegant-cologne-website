@@ -4,7 +4,7 @@ import FadeIn from '@/components/FadeIn';
 import { formatPrice } from '@/lib/formatters';
 import { createClient } from '@/prismicio';
 import { Content, isFilled } from '@prismicio/client';
-import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
+import { PrismicNextImage } from '@prismicio/next';
 import { PrismicRichText, PrismicText, SliceComponentProps } from '@prismicio/react';
 import { FC } from 'react';
 

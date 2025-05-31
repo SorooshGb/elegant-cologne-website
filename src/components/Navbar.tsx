@@ -1,10 +1,9 @@
 'use client';
 
+import TransitionLink from '@/components/TransitionLink';
 import { Content } from '@prismicio/client';
-import { PrismicNextLink } from '@prismicio/next';
 import clsx from 'clsx';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { HiBars3, HiMagnifyingGlass, HiShoppingBag, HiUser, HiXMark } from 'react-icons/hi2';
 
@@ -16,15 +15,15 @@ type NavIconsProps = {
 function NavIcons({ className = '', tabIndex }: NavIconsProps) {
   return (
     <div className={clsx('flex items-center gap-8', className)}>
-      <Link href="#" className="text-white" aria-label="Search" tabIndex={tabIndex}>
+      <a href="#" className="text-white" aria-label="Search" tabIndex={tabIndex}>
         <HiMagnifyingGlass size={24} />
-      </Link>
-      <Link href="#" className="text-white" aria-label="Account" tabIndex={tabIndex}>
+      </a>
+      <a href="#" className="text-white" aria-label="Account" tabIndex={tabIndex}>
         <HiUser size={24} />
-      </Link>
-      <Link href="#" className="text-white" aria-label="Cart" tabIndex={tabIndex}>
+      </a>
+      <a href="#" className="text-white" aria-label="Cart" tabIndex={tabIndex}>
         <HiShoppingBag size={24} />
-      </Link>
+      </a>
     </div>
   );
 }
@@ -51,7 +50,7 @@ export function Navbar({ settings }: NavbarProps) {
           </button>
 
           <div className="absolute left-1/2 -translate-x-1/2 transform">
-            <Link href="/" onClick={() => setIsDrawerOpen(false)}>
+            <TransitionLink href="/" onClick={() => setIsDrawerOpen(false)}>
               <Image
                 src="/logo.svg"
                 alt="Côte Royale Paris"
@@ -59,7 +58,7 @@ export function Navbar({ settings }: NavbarProps) {
                 height={30}
                 className="w-32 md:w-44"
               />
-            </Link>
+            </TransitionLink>
           </div>
 
           <div className="flex">
@@ -99,7 +98,7 @@ export function Navbar({ settings }: NavbarProps) {
         </div>
         <nav className="space-y-4" aria-label="Main Navigation">
           {settings.data.navigation_link.map(link => (
-            <PrismicNextLink
+            <TransitionLink
               key={link.key}
               field={link}
               onClick={() => setIsDrawerOpen(false)}

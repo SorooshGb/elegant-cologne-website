@@ -1,7 +1,6 @@
 import { Bounded } from '@/components/Bounded';
 import RevealText from '@/components/RevealText';
 import { Content, isFilled } from '@prismicio/client';
-import { PrismicNextLink } from '@prismicio/next';
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react';
 import { FC } from 'react';
 import FragranceDisplay from './FragranceDisplay';

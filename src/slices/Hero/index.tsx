@@ -1,7 +1,6 @@
 import { Content } from '@prismicio/client';
-import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
+import { PrismicNextImage } from '@prismicio/next';
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react';
-import clsx from 'clsx';
 import { FC } from 'react';
 
 import { Bounded } from '@/components/Bounded';
