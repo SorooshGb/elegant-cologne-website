@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elegant Cologne Website
+
+A stylish luxury product landing page built with **Next.js 15**, **GSAP**, **Prismic CMS**, and **Tailwind CSS** — inspired by the Côte Royale tutorial and based on the Prismic YouTube tutorial.  
+Features smooth scroll-based animations, dynamic content fetched from a headless CMS, and elegant view transitions that reveal text with cool lighting effects.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/SorooshGb/elegant-cologne-website.git
+cd elegant-cologne-website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Run the development server:
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Notes
 
-## Deploy on Vercel
+- Content is fetched from a public Prismic CMS repository, so **no environment variables or secrets** are required to run this project.
+- To properly test the view transition effects and animation smoothness, it's recommended to build the project first and run the production server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm build
+pnpm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This ensures pages are precompiled and transitions are smooth — in development mode, hot reload and on-demand compilation can cause noticeable delays.
+
+---
+
+## Working with Slice Machine
+
+This project uses Prismic's Slice Machine to develop and preview content slices locally.
+
+- Run `pnpm run slicemachine` to start the local Slice Machine simulator, where you can build and test slice components and content models.
+- After finalizing your slices locally, push the content models and slices to your own Prismic repository.
+- Update the `repositoryName` in `slicemachine.config.json` and the Prismic client config to connect your app to your Prismic repo.
+- This setup allows you to customize content structure and fields while keeping the front-end code intact.
+
+For more information, visit [https://prismic.io/docs/nextjs](https://prismic.io/docs/nextjs)
