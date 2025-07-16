@@ -15,7 +15,8 @@ export const repositoryName = process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT || sm.
 // TODO: Update the routes array to match your project's route structure.
 const routes: Route[] = [
   { type: 'homepage', path: '/' },
-  { type: 'fragrance', path: '/fragrance/:uid' }
+  { type: 'fragrance', path: '/fragrance/:uid' },
+  { type: 'quiz', path: '/quiz' }
 ];
 
 /**

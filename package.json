@@ -26,7 +26,7 @@
     "@dprint/json": "^0.20.0",
     "@dprint/typescript": "^0.95.4",
     "@eslint/eslintrc": "^3",
-    "@slicemachine/adapter-next": "^0.3.77",
+    "@slicemachine/adapter-next": "^0.3.80",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -35,7 +35,7 @@
     "dprint-plugin-malva": "^0.12.1",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
-    "slice-machine-ui": "^2.16.0",
+    "slice-machine-ui": "^2.17.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

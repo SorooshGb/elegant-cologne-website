@@ -5,6 +5,13 @@
   --font-sans: var(--font-raleway);
 }
 
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 /* Background Effects */
 .glow-background {
   background-color: hsla(0, 0%, 0%, 0);
